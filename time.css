@@ -11,17 +11,14 @@ body {
     padding: 30px;
 }
 
-
 /* Main Container */
-
 .container {
+    width: 100%;
     max-width: 1400px;
     margin: auto;
 }
 
-
 /* Header */
-
 header {
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: white;
@@ -65,9 +62,7 @@ h1 {
     font-size: 20px;
 }
 
-
 /* Info Cards */
-
 .info-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -94,31 +89,29 @@ h1 {
     font-size: 18px;
 }
 
-
 /* Table */
-
 .table-container {
     background: white;
     border-radius: 18px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 table {
     width: 100%;
-    min-width: 1000px;
+    min-width: 900px;
     border-collapse: collapse;
 }
 
-
 /* Table Header */
-
 thead th {
     background: #111827;
     color: white;
     padding: 18px 12px;
     font-size: 14px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 thead th:first-child {
@@ -129,9 +122,7 @@ thead th:last-child {
     border-top-right-radius: 18px;
 }
 
-
 /* Table Cells */
-
 td {
     border: 1px solid #eef0f4;
     padding: 10px;
@@ -146,14 +137,13 @@ td {
     white-space: nowrap;
 }
 
-
 /* Subject Cards */
-
 .subject {
     padding: 13px 8px;
     border-radius: 10px;
     transition: 0.25s ease;
     cursor: pointer;
+    min-width: 100px;
 }
 
 .subject:hover {
@@ -172,9 +162,7 @@ td {
     opacity: 0.75;
 }
 
-
 /* Subject Colors */
-
 .python {
     background: #e0f2fe;
     color: #0369a1;
@@ -215,9 +203,7 @@ td {
     color: #7e22ce;
 }
 
-
 /* Break */
-
 .break {
     background: #fff7ed;
     color: #c2410c;
@@ -225,9 +211,7 @@ td {
     letter-spacing: 1px;
 }
 
-
 /* Lunch */
-
 .lunch {
     background: #f0fdf4;
     color: #15803d;
@@ -235,9 +219,7 @@ td {
     letter-spacing: 1px;
 }
 
-
 /* Footer */
-
 footer {
     margin-top: 25px;
     padding: 20px;
@@ -251,38 +233,189 @@ footer p:first-child {
 }
 
 
-/* Responsive */
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
     body {
-        padding: 15px;
+        padding: 20px;
     }
 
     header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .year {
-        text-align: left;
+        padding: 25px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .info-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    table {
+        min-width: 850px;
+    }
 }
 
-@media (max-width: 500px) {
 
-    .info-container {
-        grid-template-columns: 1fr;
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
     }
 
+    /* Header */
+    header {
+        padding: 20px;
+        border-radius: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .college-name {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    h1 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .year {
+        text-align: left;
+    }
+
+    .year span {
+        font-size: 12px;
+    }
+
+    .year strong {
+        font-size: 17px;
+    }
+
+
+    /* Info Cards */
+
+    .info-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .info-card {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .info-card span {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .info-card strong {
+        font-size: 14px;
+    }
+
+
+    /* Timetable */
+
+    .table-container {
+        border-radius: 12px;
+    }
+
+    table {
+        min-width: 760px;
+    }
+
+    thead th {
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    td {
+        padding: 6px;
+    }
+
+    .time {
+        font-size: 10px;
+    }
+
+    .subject {
+        min-width: 95px;
+        padding: 10px 5px;
+        border-radius: 8px;
+    }
+
+    .subject strong {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+
+    .subject small {
+        font-size: 9px;
+    }
+
+    .break,
+    .lunch {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-top: 15px;
+        padding: 15px 5px;
+        font-size: 11px;
+    }
+}
+
+
+/* ========================= */
+/* VERY SMALL PHONES */
+/* ========================= */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 7px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .info-container {
+        gap: 7px;
+    }
+
+    .info-card {
+        padding: 11px;
+    }
+
+    .info-card strong {
+        font-size: 12px;
+    }
+
+    table {
+        min-width: 720px;
+    }
+
+    .subject {
+        min-width: 88px;
+    }
 }
